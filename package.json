@@ -1,21 +1,41 @@
 {
   "name": "flux-time-tracker",
-  "displayName": "Flux Time",
-  "description": "",
+  "displayName": "Flux Time Tracker",
+  "description": "Track your time in VS Code with per-file-type statistics",
   "version": "0.0.1",
+  "publisher": "bakko7821",
   "engines": {
     "vscode": "^1.109.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bakko7821/flux-time-tracker"
+  },
+  "icon": "/assets/icon.png",
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "flux-time-tracker.helloWorld",
-        "title": "Hello World"
+        "command": "timeTracker.showSummary",
+        "title": "Time Tracker: Show Summary"
+      },
+      {
+        "command": "timeTracker.showTopExtsThisMonth",
+        "title": "Time Tracker: Top File Types (This Month)"
+      },
+      {
+        "command": "timeTracker.showMonthCompare",
+        "title": "Time Tracker: Compare This Month vs Last"
+      },
+      {
+        "command": "timeTracker.reset",
+        "title": "Time Tracker: Reset Stats"
       }
     ]
   },
