@@ -1,71 +1,111 @@
-# flux-time-tracker README
+# ⏱ Flux Time Tracker
 
-This is the README for your extension "flux-time-tracker". After writing up a brief description, we recommend including the following sections.
+Accurately track how much time you spend inside Visual Studio Code —  
+with daily, monthly, and per-file-type statistics.
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Lightweight. Local. No telemetry.
 
 ---
 
-## Following extension guidelines
+## ✨ Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- ✅ Tracks total time spent in VS Code
+- 📅 Daily statistics
+- 📆 Monthly statistics
+- 📊 Compare this month vs last month
+- 🧩 File type breakdown (e.g. `.ts`, `.js`, `.json`)
+- 🪟 Accurate multi-window handling (no duplicate counting)
+- 🔒 100% local storage (no external servers)
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
 
-## Working with Markdown
+## 🧠 How It Works
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+- Time is counted **only when a VS Code window is focused**
+- If multiple windows are open:
+  - Only the focused window is tracked
+  - No double-counting
+- File-type statistics are recorded based on the active editor
+- All data is stored locally using VS Code global storage
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+No network requests.  
+No tracking outside VS Code.  
+No background services.
 
-## For more information
+---
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## 📊 Available Commands
 
-**Enjoy!**
+Open the Command Palette (`Ctrl + Shift + P`) and run:
+
+### • Time Tracker: Show Summary
+
+Displays:
+
+- Today’s time
+- Total accumulated time
+
+### • Time Tracker: Compare This Month vs Last
+
+Shows:
+
+- Current month total
+- Previous month total
+- Difference between them
+
+### • Time Tracker: Top File Types (This Month)
+
+Displays the most used file extensions for the current month  
+(e.g. `.ts — 3h 42m`, `.js — 1h 18m`)
+
+### • Time Tracker: Reset Stats
+
+Clears all stored statistics.
+
+---
+
+## 📦 Installation
+
+### Install from VSIX
+
+1. Download the latest `.vsix` file from the GitHub Releases page
+2. Open VS Code
+3. Go to Extensions
+4. Click the `...` menu
+5. Select **Install from VSIX...**
+6. Choose the downloaded file
+
+Or via terminal:
+
+```bash
+code --install-extension flux-time-tracker-x.x.x.vsix
+```
+
+## 📁 Data Storage
+
+Statistics are stored locally in VS Code's global storage directory.
+
+- No cloud sync.
+- No external database.
+- No user data leaves your machine.
+
+## 🔒 Privacy
+
+Flux Time Tracker:
+
+- Does not collect analytics
+- Does not send any data
+- Does not use telemetry
+- Does not track activity outside VS Code
+
+Fully offline.
+
+## 🚀 Roadmap
+
+Planned improvements:
+
+- 📈 Visual dashboard with charts
+- 📆 Weekly statistics
+- 📤 Export statistics to CSV
+- 🔄 Optional sync between devices
+- 📊 Status bar live timer

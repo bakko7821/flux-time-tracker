@@ -7,6 +7,10 @@
   "engines": {
     "vscode": "^1.109.0"
   },
+  "homepage": "https://github.com/bakko7821/flux-time-tracker",
+  "bugs": {
+    "url": "https://github.com/bakko7821/flux-time-tracker/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/bakko7821/flux-time-tracker"

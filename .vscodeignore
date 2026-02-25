@@ -1,14 +1,32 @@
+# dev / tooling
 .vscode/**
+.vscode-test.*
+.vscode-test.mjs
+.vscode-test.js
+.vscode-test.ts
 .vscode-test/**
-out/**
-node_modules/**
+
+# sources
 src/**
-.gitignore
-.yarnrc
-esbuild.js
-vsc-extension-quickstart.md
-**/tsconfig.json
-**/eslint.config.mjs
-**/*.map
 **/*.ts
-**/.vscode-test.*
+**/*.map
+
+# node
+node_modules/**
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# configs
+.eslintrc*
+eslint.config.*
+tsconfig*.json
+esbuild.js
+
+# git
+.git/**
+.gitignore
+.github/**
+
+# docs not needed in extension package
+vsc-extension-quickstart.md
